@@ -1,5 +1,5 @@
 # loading developer libraries
-import requests, json, urllib, yaml
+import requests, json, yaml
 from flask import Flask, request
 from two1.lib.wallet import Wallet
 from two1.lib.bitserv.flask import Payment
