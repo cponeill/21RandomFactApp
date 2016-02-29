@@ -1,0 +1,80 @@
+# You can edit this file at editor.swagger.io.
+swagger: '2.0'
+info:
+   x-21-github-profile-url: http://github.io
+   x-21-github-project-url: http://github.io
+   title: Random Facts
+   description: Display a random fact about a randomly chosen year.
+   termsOfService: https://opensource.org/licenses/MIT
+   x-21-usage: 'Fun app that calls an API and outpus a random fact via JSON output.'
+   x-21-quick-buy: "wget -O client.py http://10.147.17.138:5000/client \npython3 client.py http://10.147.17.138:5000"
+   x-21-category: entertainment
+   x-21-total-price:
+     min: 5000
+     max: 5000
+   contact:
+     name: 'cponeill'
+     email: caseyoneill78@hotmail.com
+     url: https://21.co
+   license:
+     name: MIT LICENSE
+     url: https://opensource.org/licenses/MIT
+   x-21-keywords:
+     - new
+     - test
+   version: '0.1'
+host: 10.147.17.138:5000
+schemes:
+  - http
+basePath: /
+x-21-manifest-path: /manifest
+x-21-healthcheck-path: /healthy
+paths:
+   /randomfact:
+     post:
+       summary: Gets a random fact of text passed as utf-8 encoded plaintext.
+       consumes:
+         - application/json
+       produces:
+         - application/json
+       parameters:
+         - name: body
+           description: string for which to get random text
+           in: body
+           required: true
+           schema:
+             type: object
+             properties:
+               text:
+                 type: string
+       responses:
+         200:
+           description: random fact
+           schema:
+             type: object
+             properties:
+               score:
+                 type: number
+                 format: float
+         400:
+           description: invalid input
+           schema:
+             type: object
+             properties:
+                error_message:
+                 type: string
+         500:
+           description: error processing request
+           schema:
+             type: object
+             properties:
+               error_message:
+                 type: string
+   /client:
+     get:
+       summary: Returns example client script.
+       responses:
+         200:
+           description: client file
+           schema:
+             type: string
