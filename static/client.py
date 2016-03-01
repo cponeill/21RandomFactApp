@@ -8,8 +8,8 @@ wallet = Wallet()
 username = Config().username
 requests = BitTransferRequests(wallet, username)
 
-#server_url = 'http://localhost:5000/'
-server_url = 'http://10.244.189.126:5000/'
+server_url = 'http://localhost:5000/'
+#server_url = 'http://10.244.189.126:5000/'
 
 def get_answer():
     '''Tell the client they are about to learn a random fact.'''
