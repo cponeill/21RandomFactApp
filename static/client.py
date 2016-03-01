@@ -9,15 +9,19 @@ username = Config().username
 requests = BitTransferRequests(wallet, username)
 
 #server_url = 'http://localhost:5000/'
-server_url = 'http://10.147.17.138:5000/'
+server_url = 'http://10.244.189.126:5000/'
 
 def get_answer():
     '''Tell the client they are about to learn a random fact.'''
     print(figlet_format("FACT OF THE DAY!"))
     response = requests.get(url=server_url+'randomfact')
-    answer = response.text
+    if response.status_code == 200:
+        answer = response.text
+    else:
+        answer = str(response.status_code) + ' error'
     print(answer)
 
 if __name__=='__main__':
     get_answer()
+
 
