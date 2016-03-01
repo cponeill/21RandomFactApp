@@ -7,7 +7,7 @@ info:
    description: Display a random fact about a randomly chosen year.
    termsOfService: https://opensource.org/licenses/MIT
    x-21-usage: 'Fun app that calls an API and outpus a random fact via JSON output.'
-   x-21-quick-buy: "wget -O client.py http://10.244.189.126:5000/client \npython3 client.py http://10.244.189.126:5000"
+   x-21-quick-buy: "wget -O client.py http://10.244.189.126:5000/randomfact \npython3 client.py http://10.244.189.126:5000"
    x-21-category: entertainment
    x-21-total-price:
      min: 5000
