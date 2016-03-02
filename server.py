@@ -46,7 +46,7 @@ def docs():
 @app.route('/client')
 def client():
 
-  return send_from_directory('~/MyApp/21RandomFactApp/static', 'client.py')
+  return send_from_directory('/static', 'client.py')
 
 
 
