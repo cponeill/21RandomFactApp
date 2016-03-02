@@ -3,7 +3,7 @@ swagger: '2.0'
 info:
    x-21-github-profile-url: http://github.io
    x-21-github-project-url: http://github.io
-   title: Random Facts
+   title: Fun Facts
    description: Display a random fact about a randomly chosen year.
    termsOfService: https://opensource.org/licenses/MIT
    x-21-usage: 'Fun app that calls an API and outpus a random fact via JSON output.'
@@ -14,14 +14,15 @@ info:
      max: 5000
    contact:
      name: 'cponeill'
-     email: caseyoneill78@hotmail.com
+     email: caseyoneill78@hotmail.com 
      url: https://21.co
    license:
      name: MIT LICENSE
      url: https://opensource.org/licenses/MIT
    x-21-keywords:
-     - new
-     - test
+     - Facts
+     - Years
+     - Random
    version: '0.1'
 host: 10.244.189.126:5000
 schemes:
