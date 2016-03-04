@@ -31,7 +31,7 @@ basePath: /
 x-21-manifest-path: /manifest
 x-21-healthcheck-path: /healthy
 paths:
-   /randomfact:
+   /send_random_fact:
      post:
        summary: Gets a random fact of text passed as utf-8 encoded plaintext.
        consumes:
